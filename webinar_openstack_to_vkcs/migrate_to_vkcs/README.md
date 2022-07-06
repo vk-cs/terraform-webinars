@@ -33,7 +33,9 @@ $env:TF_VAR_password="My_Password"
 
 ## Миграция конфигурации и импорт ресурсов
 1. Добавьте пустой ресурс в конфигурацию
-2. Примените команду импорта ресурса **terraform import vkcs_compute_instance.myVM Resource_ID**
+2. Примените команду импорта ресурса **terraform import vkcs_compute_instance.myVM Resource_ID**, где:
+- **vkcs_compute_instance.myVM** - имя пустого ресурса созданного на шаге 1
+- **Resource_ID** - ID ресурса в облаке VK Cloud Solutions. Можно получить в свойствах ресурса в Личном кабинете или используя CLI.
 3. Получите конфигурацию импортированного ресурса командой **terraform show**
 4. Добавьте конфигурацию в файл для ранее созданного пустого ресурса.
 5. Проверьте конфигурацию командой **terraform plan**
