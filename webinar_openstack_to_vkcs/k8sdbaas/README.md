@@ -1,4 +1,4 @@
-# Как разворачивать приложения в кластере Kubernetes в интеграции с DBaaS с помощью Terrafrom провайдером от VC Cloud Solutions
+# Как разворачивать приложения в кластере Kubernetes в интеграции с DBaaS с помощью Terraform провайдером от VC Cloud Solutions
 
 ## Описание
 Пример автоматического разворачивания приложения в инфраструктуре облака VK Cloud Solutions с использованием Kubernets aaS и DBaaS. Для примера используется Wordpress, который запускается в кластере Kubernetes с одним мастером и группой рабочих нод. Для нод-группы включено автомасштабирование. Wordpress подключается к базе данных создаваемой в инстансе MySql облачного сервиса DBaaS.
@@ -10,10 +10,7 @@
 - Project ID
 - Username
 - Region Name
-3. Установите [исполняемые файлы Terrafrom](https://mcs.mail.ru/docs/ru/additionals/terraform/terraform-installation)
-
-## Добавление переменных окружения.
-
+3. Установите [исполняемые файлы Terraform](https://mcs.mail.ru/docs/ru/additionals/terraform/terraform-installation)
 
 ## Разворачивание приложения через Terrafrom 
 1. Перейдите в папку k8sdbass
@@ -42,6 +39,6 @@ $env:TF_VAR_password="My_Password"
 ```bash
 terraform apply
 ```
-4. Подтвердите создание введя yes.
+4. Подтвердите создание командой **yes**.
 5. После завершения внешний IP адрес, для настройки Wordpress, будет выведен в консоль в переменной **external_ip**
 6. Kubeconfig для подключения к кластеру будет сохранен в файле **kube_config.yaml**
